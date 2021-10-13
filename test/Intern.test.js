@@ -3,7 +3,7 @@ const Intern = require('../lib/Intern');
 //This will test the intern class
 
 describe('Intern', () => {
-    it("should return an intern object", () => {
+    it("should return an intern instance", () => {
         const newHire = new Intern("Ironman",0,"atombomb@mail.com");
         expect(typeof (newHire)).toEqual("object")
     });
