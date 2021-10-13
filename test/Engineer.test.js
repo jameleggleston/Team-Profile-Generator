@@ -1,5 +1,6 @@
-const { it } = require('@jest/globals');
 const Engineer = require('../lib/Engineer');
+
+// This will test the engineer class.
 
 describe('Engineer', () => {
     it('should return an Engineer instance', () => {
