@@ -10,12 +10,12 @@ describe('Intern', () => {
 
     it("should check for a name given", () => {
         const newHire = new Intern("The Hulk", 1, "rager@mail.com");
-        expect(newHire.getName).toEqual("The Hulk");
+        expect(newHire.getName()).toEqual("The Hulk");
     });
 
     it ("should check for a id given", () => {
         const newHire = new Intern("Thor", 81, "thunderlord@mail.com");
-        expect(newHire.getId).toEqual(81);
+        expect(newHire.getId()).toEqual(81);
     });
 
     it ("should check for a email given", () => {
