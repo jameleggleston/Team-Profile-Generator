@@ -21,6 +21,8 @@ function createManagercard(manager) {
     `;
 }
 
+//This is going to creat the egineer card
+
 function createEngineerCard(engineer) {
     return `
         <div>
@@ -39,6 +41,8 @@ function createEngineerCard(engineer) {
     `;
 }
 
+//This is going to create the intern card
+
 function createInternCard(intern){
     return `
         <div>
@@ -54,5 +58,37 @@ function createInternCard(intern){
                 </ul>
             </div>
         </div>
+    `;
+}
+
+function finalDocument(emplyeeCards){
+    return `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../dist/style.css">
+        <title>Team Profile</title>
+    </head>
+    <body>
+        <header>
+            <h1>Team Profile</h1>
+
+        </header>
+        <main>
+            <div>
+                ${emplyeeCards}
+            </div>
+
+        </main>
+        <footer>
+            <p>&copy; 2021 Jamel Eggleston </p>
+        </footer>
+    
+    </body>
+    </html>
+
     `;
 }
