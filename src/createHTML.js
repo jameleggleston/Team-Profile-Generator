@@ -21,6 +21,24 @@ function createManagercard(manager) {
     `;
 }
 
+function createEngineerCard(engineer) {
+    return `
+        <div>
+            <div>
+                <div>
+                    <h3>${engineer.name}</h3>
+                    <h4> Engineer </h4>
+                </div>
+                <ul>
+                    <li> Id: ${engineer.id}</li>
+                    <li> Email: <a href="mailto:${engineer.email}"> ${engineer.email}</a></li>
+                    <li>GitHub: <a href="https://github.com/${egineer.gitHub}" target="_blank">${engineer.gitHub}</a></li>
+                </ul>
+            </div>
+        </div>
+    `;
+}
+
 function createInternCard(intern){
     return `
         <div>
