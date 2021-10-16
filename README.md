@@ -30,7 +30,7 @@ After you run the command above, the user will be prompted to answer a series of
 
 ## Test
 
-<iframe src="https://drive.google.com/file/d/1185oHV4YD1ORUHrVIFtjBlIJEnNxkfBu/preview" width="640" height="480"></iframe>
+
 
 ## Questions
 Do you have questions? Contact me here:
