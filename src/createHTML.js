@@ -2,7 +2,7 @@ const Employee = require("../lib/Employee")
 
 //This is going to create the card for the manager.
 
-function createManagercard(manager) {
+function createManagerCard(manager) {
     return `
         <div>
             <div>
@@ -92,3 +92,37 @@ function finalDocument(emplyeeCards){
 
     `;
 }
+
+// Function to combine all added employee cards
+function createHTML(fullTeam) {
+
+    // Create new array of employee cards based on employee role
+    const cardsArray = fullTeam.map(employee => {
+
+        // Check role for each employee in fullTeam array using the getRole() method
+        let role = employee.getRole();
+
+        if (role === "Manager") {
+            let managerCard = createManagerCard(employee);
+            return managerCard;
+        }
+
+        if (role === "Engineer") {
+            let engineerCard = createEngineerCard(employee);
+            return engineerCard;
+        }
+
+        if (role === "Intern") {
+            let internCard = createInternCard(employee);
+            return internCard;
+        }
+    });
+
+    const employeeCards = cardsArray.join("");
+
+    const finishedHTML = finalDocument(employeeCards);
+
+    return finishedHTML;
+}
+
+module.exports = createHTML;

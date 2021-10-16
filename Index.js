@@ -94,9 +94,52 @@ function addEmployee() {
                 when: (input) => input.role === "Intern"
             },
             {
-                type: "input",
+                type: "confirm",
                 name: "addAnotherEmployee",
                 message: "Would you like to add another employee?"
             }
         ])
+        .then((response) => {
+            //Destructuring assignment of variables from adding an employee
+            const { name, id, email, role, gitHub, school, addAnotherEmployee } = response;
+            let employee;
+
+            //Create a new instance of subclasses based on their role.
+            if(role === "Engineer") {
+                employee = new Engineer(name, id, email, gitHub);
+            }else if(role === "Intern") {
+                employee = new Intern(name, id, email, school);
+            }
+
+            //This will push the added employee to the full team array.
+            fullTeam.push(employee);
+
+            if(addAnotherEmployee) {
+                return addAnotherEmployee();
+            }
+
+            return fullTeam;
+        })
 }
+
+// This will Write the html file to the dist directory
+function writeFile(html) {
+    fs.writeFile("./dist/index.html", html, err => {
+        err ? console.error(err) : console.log("Team profile has been created! Check out the index.html file.")
+    });
+}
+
+// Upon starting the application run the appropriate functions until ending
+async function init() {
+    console.log(`
+    ===================================================
+    Please build your team by first adding the manager.
+    ===================================================
+    `)
+    await addManager()
+    
+    const html = createHTML(fullTeam);
+    writeFile(html);
+}
+
+init();
