@@ -7,7 +7,7 @@ function createManagerCard(manager) {
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
             <div class = "card">
                 <div class="card-header">
-                    <h3>${manager.name}</h3>
+                    <h2>${manager.name}</h2>
                     <h4><i class="bi bi-cup-fill"></i> Manager </h4>
                 </div>
                 <ul class="list-group list-group-flush">
@@ -28,7 +28,7 @@ function createEngineerCard(engineer) {
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
             <div class="card">
                 <div class="card-header">
-                    <h3>${engineer.name}</h3>
+                    <h2>${engineer.name}</h2>
                     <h4><i class="bi bi-laptop"></i> Engineer </h4>
                 </div>
                 <ul class="list-group list-group-flush">
@@ -48,7 +48,7 @@ function createInternCard(intern){
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
             <div class="card">
                 <div class="card-header">
-                    <h3>${intern.name}</h3>
+                    <h2>${intern.name}</h2>
                     <h4><i class="bi bi-book"></i> Intern </h4>
                 </div>
                 <ul class="list-group list-group-flush">
@@ -87,7 +87,7 @@ function finalDocument(emplyeeCards){
             </div>
 
         </main>
-        <footer class="footer py-4 bg-dark text-white-50">
+        <footer class="footer text-black-75">
             <div class= "container text-center">
                 <small> &copy; 2021 Jamel Eggleston </small>
             </div>
