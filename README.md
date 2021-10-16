@@ -1,6 +1,6 @@
 # Team Profile Generator
 
-as a team manager.
+As a member of a team, sometimes you need to keep track of who's on your team. This application allows you to log some basic information about them. This way you can never forget who's on your team!
 
 ## Table of Contents
 * [Installation](#Installation)
@@ -32,6 +32,7 @@ After you run the command above, the user will be prompted to answer a series of
 screen shot below:</b>
 ![caption](./images/screenshot1.jpg)
 
+example of how application works:</b>
 ![caption](./images/example.gif)
 
 
