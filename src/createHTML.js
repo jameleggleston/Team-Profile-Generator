@@ -4,16 +4,16 @@ const Employee = require("../lib/Employee")
 
 function createManagerCard(manager) {
     return `
-        <div>
-            <div>
-                <div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
+            <div class = "card">
+                <div class="card-header">
                     <h3>${manager.name}</h3>
-                    <h4> Manager </h4>
+                    <h4><i class="bi bi-cup-fill"></i> Manager </h4>
                 </div>
-                <ul>
-                    <li> Id: ${manager.id}</li>
-                    <li> Email: <a href="mailto:${manager.email}"> ${manager.email}</a></li>
-                    <li> Office Number: ${manager.officeNumber}</li>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> Id: ${manager.id}</li>
+                    <li class="list-group-item"> Email: <a href="mailto:${manager.email}"> ${manager.email}</a></li>
+                    <li class="list-group-item"> Office Number: ${manager.officeNumber}</li>
                 </ul>
             </div>
         </div>
@@ -25,16 +25,16 @@ function createManagerCard(manager) {
 
 function createEngineerCard(engineer) {
     return `
-        <div>
-            <div>
-                <div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
+            <div class="card">
+                <div class="card-header">
                     <h3>${engineer.name}</h3>
-                    <h4> Engineer </h4>
+                    <h4><i class="bi bi-laptop"></i> Engineer </h4>
                 </div>
-                <ul>
-                    <li> Id: ${engineer.id}</li>
-                    <li> Email: <a href="mailto:${engineer.email}"> ${engineer.email}</a></li>
-                    <li>GitHub: <a href="https://github.com/${engineer.gitHub}" target="_blank">${engineer.gitHub}</a></li>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> Id: ${engineer.id}</li>
+                    <li class="list-group-item"> Email: <a href="mailto:${engineer.email}"> ${engineer.email}</a></li>
+                    <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.gitHub}" target="_blank">${engineer.gitHub}</a></li>
                 </ul>
             </div>
         </div>
@@ -45,16 +45,16 @@ function createEngineerCard(engineer) {
 
 function createInternCard(intern){
     return `
-        <div>
-            <div>
-                <div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
+            <div class="card">
+                <div class="card-header">
                     <h3>${intern.name}</h3>
-                    <h4>Intern</h4>
+                    <h4><i class="bi bi-book"></i> Intern </h4>
                 </div>
-                <ul>
-                    <li> Id: ${intern.id}</li>
-                    <li> Email: <a href="mailto:${intern.email}"> ${intern.email}</a></li>
-                    <li> School: ${intern.school} </li>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> Id: ${intern.id}</li>
+                    <li class="list-group-item"> Email: <a href="mailto:${intern.email}"> ${intern.email}</a></li>
+                    <li class="list-group-item"> School: ${intern.school} </li>
                 </ul>
             </div>
         </div>
@@ -71,21 +71,26 @@ function finalDocument(emplyeeCards){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco">
         <link rel="stylesheet" href="../dist/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <title>Team Profile</title>
     </head>
     <body>
-        <header>
-            <h1>Team Profile</h1>
+        <header class="bg-success bg-gradient p-5">
+            <h1 class="text-center text-light">Team Profile</h1>
 
         </header>
-        <main>
-            <div>
+        <main id ="page-content">
+            <div class="container-fluid row align-items-center justify-content-center m-0 p-5">
                 ${emplyeeCards}
             </div>
 
         </main>
-        <footer>
-            <p>&copy; 2021 Jamel Eggleston </p>
+        <footer class="footer py-4 bg-dark text-white-50">
+            <div class= "container text-center">
+                <small> &copy; 2021 Jamel Eggleston </small>
+            </div>
         </footer>
     
     </body>

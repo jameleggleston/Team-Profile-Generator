@@ -73,7 +73,7 @@ function addEmployee() {
             },
             {
                 type: "input",
-                name: "Id",
+                name: "id",
                 messgae: "What is the employee's Id number?"
             },
             {
@@ -115,7 +115,7 @@ function addEmployee() {
             fullTeam.push(employee);
 
             if(addAnotherEmployee) {
-                return addAnotherEmployee();
+                return addEmployee();
             }
 
             return fullTeam;

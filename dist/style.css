@@ -1,3 +1,16 @@
 *{
-    font-family: Sue Ellen Francisco;
+    font-family: Sue Ellen Francisco, Arial, sans;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+h2{
+  text-align: center;
 }
