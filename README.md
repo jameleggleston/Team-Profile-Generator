@@ -29,6 +29,10 @@ After you run the command above, the user will be prompted to answer a series of
 *Please note that you cannot create a team member until the manager is created first. 
 
 ## Test
+screen shot below:</b>
+![caption](./images/screenshot1.jpg)
+
+![caption](./images/example.gif)
 
 
 
