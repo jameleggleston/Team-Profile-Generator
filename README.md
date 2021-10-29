@@ -33,7 +33,9 @@ screen shot below:</b>
 ![caption](./images/screenshot1.jpg)
 
 example of how application works:</b>
-![caption](./images/example.gif)
+
+https://user-images.githubusercontent.com/74510050/139378493-d7f9385a-8b4e-4fa0-aa40-1da456f6f42a.mp4
+
 
 
 
